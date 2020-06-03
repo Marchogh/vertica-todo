@@ -13,7 +13,7 @@
     <section class="wrapper">
         <header class="header">
             <img class="logo" src="/images/logo.svg" alt="todo logo">
-            <form class="search-form">
+            <form role="search" class="search-form">
                 <img class="search-icon" src="/images/search.svg" alt="">
                 <input class="search-input" type="text" name="search-form" placeholder="search task">
             </form>
@@ -23,7 +23,7 @@
             <!-- Dummy data -->
             <li class="todo-item">
                 <div class="todo-item-header">
-                    <input type="checkbox" name="checkbox" id="">
+                    <input type="checkbox" name="checkbox" aria-label="Mark as finished">
                     <h2 class="todo-title">Finish quarter report</h2>
                     <span class="todo-icon-category-home"></span>
                     <p>home</p>
@@ -33,7 +33,7 @@
             </li>
             <li class="todo-item">
                 <div class="todo-item-header">
-                    <input type="checkbox" name="checkbox" id="">
+                    <input type="checkbox" name="checkbox" aria-label="Mark as finished">
                     <h2 class="todo-title">Todo 2 title</h2>
                     <span class="todo-icon-category-work"></span>
                     <p>work</p>
@@ -57,7 +57,7 @@
                 </select>
                 <button class="todo-button" type="submit">Create task</button>
             </form>
-            <button class="open-todo">
+            <button class="open-todo" aria-label="Open create todo">
                 <img src="/images/plus.svg" alt="">
             </button>
         </div>

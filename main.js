@@ -22,7 +22,7 @@ function createTodo (e) {
     todoList.insertAdjacentHTML('afterbegin', `
      <li class="todo-item">
                 <div class="todo-item-header">
-                    <input type="checkbox" name="checkbox" id="">
+                    <input type="checkbox" name="checkbox" aria-label="Mark as finished">
                     <h2 class="todo-title">${todoTitle.value}</h2>
                     <span class="todo-icon-category-${todoCategory.value}"></span>
                     <p>${todoCategory.value}</p>

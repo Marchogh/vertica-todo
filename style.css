@@ -51,6 +51,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 input[type=checkbox] {
+    cursor: pointer;
     transform: scale(1.5);
 }
 
@@ -123,6 +124,7 @@ input[type=checkbox] {
     background: var(--light-blue-color);
     border: none;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .todo-item {
@@ -193,7 +195,7 @@ input[type=checkbox] {
     justify-content: center;
     align-items: center;
     margin: auto;
-    outline: none;
+    cursor: pointer;
 }
 
 .create-todo-modal {
@@ -206,6 +208,7 @@ input[type=checkbox] {
 
 .hidden {
     opacity: 0;
+    pointer-events: none;
 }
 
 
