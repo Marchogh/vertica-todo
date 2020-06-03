@@ -1,0 +1,225 @@
+/* CSS variables */
+:root {
+
+    /* Colors */
+  --light-gray-color: #F1F1F1;
+  --gray-color: #AEAEAE;
+  --dark-color: #333333;
+  --red-color: #D75050;
+  --rosa-color: #E6D2D2;
+  --dust-blue-color: #55A5E1;
+  --light-blue-color: #0091FF;
+  --brown-color: #A06748;
+
+  /* Utility  */
+  --spacing-small: 10px 0;
+  --spacing-medium: 35px 0;
+  --border-radius: 5px;
+  --box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --border-gray: 1px solid lightgray;
+}
+
+/* CSS reset - https://alligator.io/css/minimal-css-reset/ */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+/* Main styles */
+
+.wrapper {
+   width: 90vw;
+   margin: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.logo {
+    width: 35%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2em;
+    margin: var(--spacing-small);
+}
+
+.search-form {
+    position: relative;
+    border-radius: var(--border-radius);
+}
+
+.search-input {
+    padding: 0.6em;
+    border: var(--border-gray);
+    border-radius: var(--border-radius);
+}
+
+.search-icon {
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    width: 12px;
+}
+
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-small);
+    color: #ffffff;
+    background-color: var(--dark-color);
+    opacity: 1;
+    transition: all 200ms ease-in-out 0s;
+}
+
+.todo-form > input, select, button {
+    padding: 0.6em;
+    border: var(--border-gray);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-small);
+}
+
+.todo-button {
+    padding: 0.6em;
+    border: var(--border-gray);
+    border-radius: var(--border-radius);
+    background: var(--light-blue-color);
+    border: none;
+    color: #ffffff;
+}
+
+.todo-item {
+    display: grid;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-medium);
+}
+
+.todo-title {
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 1em;
+    margin-left: 15px;
+}
+
+.todo-item-header {
+    display: flex;
+    align-items: center;
+    background: var(--light-gray-color);
+    padding: 15px;
+}
+
+.todo-item-body {
+    padding: 15px;
+    margin-left: 35px;
+    font-size: 1em;
+}
+
+.todo-icon-category-school {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: var(--dust-blue-color);
+}
+
+.todo-icon-category-misc {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: var(--brown-color);
+}
+
+.todo-icon-category-work {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: var(--rosa-color);
+}
+
+.todo-icon-category-home {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: var(--red-color);
+}
+
+.open-todo {
+    background: var(--light-blue-color);
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    outline: none;
+}
+
+.create-todo-modal {
+    position: fixed;
+    bottom: 25px;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 90%;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+
+/* Media  */
+@media (min-width: 800px) {
+  .wrapper {
+    max-width: 70vw;
+  }
+
+  .logo {
+      width: initial;
+  }
+
+  .create-todo-modal {
+    max-width: 70vw;
+}
+}
