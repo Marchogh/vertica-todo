@@ -48,25 +48,23 @@
             </li>
             <!-- Dummy data end -->
         </ul>
-        <div class="create-todo-modal">
-            <form class="todo-form hidden">
-                <label for="title">title</label>
-                <input type="text" name="title">
-                <label for="description">description</label>
-                <input type="text" name="description">
-                <label for="category">category</label>
-                <select name="category">
-                    <option value="misc">misc</option>
-                    <option value="home">home</option>
-                    <option value="school">school</option>
-                    <option value="work">work</option>
-                </select>
-                <button class="todo-button" type="submit">Create task</button>
-            </form>
-            <button class="open-todo" aria-label="Open create todo">
-                <img src="/images/plus.svg" alt="">
-            </button>
-        </div>
+        <form class="todo-form hidden">
+            <label for="title">title</label>
+            <input type="text" name="title">
+            <label for="description">description</label>
+            <input type="text" name="description">
+            <label for="category">category</label>
+            <select name="category">
+                <option value="misc">misc</option>
+                <option value="home">home</option>
+                <option value="school">school</option>
+                <option value="work">work</option>
+            </select>
+            <button class="todo-button" type="submit">Create task</button>
+        </form>
+        <button class="open-todo" aria-label="Open create todo">
+            <img src="/images/plus.svg" alt="">
+        </button>
     </section>
 
     <script src="/main.js"></script>

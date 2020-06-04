@@ -45,7 +45,6 @@ openTodo.addEventListener('click', () => {
 });
 
 /* Close modal with click outside */
-
 document.addEventListener('click', function (event) {
     let isClickInside = todoForm.contains(event.target);
     let isClickBtn = openTodo.contains(event.target);
