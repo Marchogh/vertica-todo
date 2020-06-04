@@ -15,7 +15,7 @@
   --spacing-small: 10px 0;
   --spacing-medium: 35px 0;
   --border-radius: 5px;
-  --box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
   --border-gray: 1px solid lightgray;
 }
 
@@ -46,13 +46,12 @@ img {
   height: auto;
 }
 
-input:focus::-webkit-input-placeholder {
-    color: transparent;
-}
-
 input[type=checkbox] {
     cursor: pointer;
-    transform: scale(1.5);
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
 }
 
 /* Main styles */
@@ -66,7 +65,7 @@ input[type=checkbox] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .logo {
@@ -144,13 +143,15 @@ input[type=checkbox] {
 .todo-item-header {
     display: flex;
     align-items: center;
-    background: var(--light-gray-color);
     padding: 15px;
+    background: var(--light-gray-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
 }
 
 .todo-item-body {
     padding: 15px;
-    margin-left: 35px;
+    margin-left: 50px;
     font-size: 1em;
 }
 
@@ -212,7 +213,30 @@ input[type=checkbox] {
 }
 
 
-/* Media  */
+/* Custom checkbox styling  */
+
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  position: relative;
+  outline: none;
+  cursor:pointer;
+  top: .3em;
+}
+
+
+input[type="checkbox"]:checked:before{
+  content: url(/images/check-circle.svg);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+
+/* Media queries mobile first  */
+
 @media (min-width: 800px) {
   .wrapper {
     max-width: 70vw;

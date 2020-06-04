@@ -5,6 +5,7 @@ const todoButton = document.querySelector('.todo-button');
 const search = document.querySelector('input[name="search-form"]');
 const searchItems = document.querySelectorAll(".todo-item");
 const openTodo = document.querySelector('.open-todo');
+const closeTodo = document.querySelector('.create-todo-modal');
 let todoTitle = document.querySelector('input[name="title"]');
 let todoDescription = document.querySelector('input[name="description"]');
 let todoCategory = document.querySelector('select[name="category"]');
@@ -41,6 +42,20 @@ todoButton.addEventListener('click', createTodo);
 /* Open and closes modal to create a todo */
 openTodo.addEventListener('click', () => {
     todoForm.classList.toggle('hidden');
+});
+
+/* Close modal with click outside */
+
+document.addEventListener('click', function (event) {
+    let isClickInside = todoForm.contains(event.target);
+    let isClickBtn = openTodo.contains(event.target);
+    
+    if (isClickInside || isClickBtn) {
+       return;
+    } else {
+        todoForm.classList.add('hidden');
+    }
+    
 });
 
 /* Search filter */
