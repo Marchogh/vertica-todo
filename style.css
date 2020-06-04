@@ -249,7 +249,7 @@ input[type="checkbox"]:checked:before{
       width: initial;
   }
 
-  .create-todo-modal {
+  .todo-form {
     max-width: 70vw;
 }
 }
